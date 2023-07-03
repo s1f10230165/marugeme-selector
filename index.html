@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>オンラインショップ</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>オンラインショップ</h1>
+    <button onclick="window.location.href='/cart'">カートを表示</button>
+    <h2>商品一覧</h2>
+    <button onclick="addToCart('商品A')">商品Aをカートに追加</button>
+    <button onclick="addToCart('商品B')">商品Bをカートに追加</button>
+    <button onclick="addToCart('商品C')">商品Cをカートに追加</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

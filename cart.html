@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>カート</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>カート</h1>
+    <button onclick="window.location.href='/'">戻る</button>
+    <ul>
+        {% for item in cart %}
+            <li>{{ item }} <button onclick="removeFromCart('{{ item }}')">削除</button></li>
+        {% endfor %}
+    </ul>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
